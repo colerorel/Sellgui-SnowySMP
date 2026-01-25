@@ -1,4 +1,4 @@
-# SnowySMP Sell GUI
+# ❄️ SnowySMP Sell GUI ❄️
 
 A lightweight, custom Minecraft Spigot plugin designed for the **SnowySMP** server. This plugin provides an interactive GUI for players to sell items and an easy way to check item market values.
 
