@@ -30,6 +30,6 @@ prices:
 removed:
   GRASS_BLOCK: 5.0
 
-* ** If you need a custom plugin like this, or something more complex 
+If you need a custom plugin like this, or something more complex 
 that works with other plugins on your server, feel free to reach out!**
 Discord: zainim0
