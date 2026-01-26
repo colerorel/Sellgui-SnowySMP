@@ -1,32 +1,31 @@
 # ❄️ SnowySMP Sell GUI ❄️
 
-A lightweight, custom Minecraft Spigot plugin designed for the **SnowySMP** server. This plugin provides an interactive GUI for players to sell items and an easy way to check item market values.
+A lightweight, robust, and **dupe-proof** Minecraft Spigot plugin built for **1.21.1**. This plugin provides an interactive economy system for the **SnowySMP** server, allowing players to sell items via GUI and admins to manage market prices in real-time.
 
 ## 🛠 Features
-* **Interactive Sell GUI:** A 54-slot inventory where players can place items to sell them instantly.
-* **Smart Processing:** Items are automatically sold if the player closes the inventory or clicks the confirmation star.
-* **Price Lookup:** Check individual item prices or stack values via command.
-* **Visual Price List:** A paginated, read-only GUI that displays all available server prices.
-* **Vault Integration:** Seamlessly connects with the server's economy system.
+* **Interactive Sell GUI (`/sellgui`):** A 54-slot inventory for selling items. 
+* **Dupe-Proof Security:** Items are never lost. If a player closes the GUI without selling or if the server restarts, items are safely returned to the player's inventory or dropped at their feet.
+* **Price Lookup:** Check individual item values and full stack values while holding an item.
+* **Visual Price List:** A clean GUI (`/worth list`) showing every item available for sale and its price.
+* **Admin Restore System:** A dedicated GUI to view removed items and restore them to the market individually or use the "Restore All" function.
+* **Vault Integration:** High-performance connection to your server's economy.
+* **Required Plugins** Vault, EssentialsX, EconomyShopGUI
 
 ## 📋 Commands
 | Command | Permission | Description |
 | :--- | :--- | :--- |
-| `/guisell` | Player | Opens the Sell GUI menu. |
-| `/worth` | Player | Shows the value of the item in your main hand. |
-| `/worth <item>` | Player | Shows the value of a specific item. |
-| `/worth list` | Player | Opens a GUI menu showing all item prices. |
-| `/guisell reload` | `guisell.admin` | Reloads the `worth.yml` configuration file. |
+| `/sellgui` | Player | Opens the Sell GUI. Items are sold upon clicking the Star or closing the menu. |
+| `/worth` | Player | Displays the value of the item in your hand (and stack value). |
+| `/worth list` | Player | Opens a GUI showing all items currently for sale. |
+| `/worth remove` | Admin | Removes the item in your hand from the market instantly. |
+| `/worth remove list` | Admin | Opens the **Restore GUI** to bring back removed items or "Restore All." |
 
 ## ⚙️ Configuration
-The plugin uses a `worth.yml` file to manage prices. You can add any Minecraft Material to the list and assign it a decimal value.
+The plugin generates a `worth.yml` file. It automatically tracks both active prices and items you have removed.
 
 ```yaml
 prices:
   DIAMOND: 100.0
   IRON_INGOT: 10.0
-  GOLD_INGOT: 25.0
-
-# If you need a custom plugin like this, or something more complex 
-# that works with other plugins on your server, feel free to reach out!
-# Discord: zainim0
+removed:
+  GRASS_BLOCK: 5.0
