@@ -32,4 +32,4 @@ removed:
 
 * ** If you need a custom plugin like this, or something more complex 
 that works with other plugins on your server, feel free to reach out!**
-* ** # Discord: zainim0
+Discord: zainim0
