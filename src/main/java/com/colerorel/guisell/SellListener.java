@@ -65,7 +65,7 @@ public class SellListener implements Listener, CommandExecutor {
         player.openInventory(inv);
     }
 
-    // NEW: SnowySMP Removed Items GUI (Used by /worth remove list)
+
     public void openRemoveList(Player player) {
         Inventory inv = Bukkit.createInventory(new RemovedItemsHolder(), 54, ChatColor.BLUE + "Snowy" + ChatColor.WHITE + "SMP Removed Items");
         List<Material> materials = new ArrayList<>(plugin.getSellPrices().keySet());
