@@ -44,7 +44,6 @@ public class WorthCommand implements CommandExecutor, TabCompleter {
             }
         }
 
-        // Standard /worth check
         Material material = (args.length == 0) 
             ? player.getInventory().getItemInMainHand().getType() 
             : Material.matchMaterial(args[0].toUpperCase());
