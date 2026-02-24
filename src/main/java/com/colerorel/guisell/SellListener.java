@@ -34,7 +34,6 @@ public class SellListener implements Listener, CommandExecutor {
         return true;
     }
 
-    // Main Sell GUI
     public void openGUI(Player player) {
         Inventory gui = Bukkit.createInventory(new SellGUIHolder(), 54, ChatColor.BLUE + "Snowy" + ChatColor.WHITE + "SMP Sell");
         ItemStack glass = createItem(Material.BLUE_STAINED_GLASS_PANE, " ");
@@ -44,7 +43,6 @@ public class SellListener implements Listener, CommandExecutor {
         player.openInventory(gui);
     }
 
-    // Standard Worth List GUI
     public void openWorthList(Player player, int page) {
         Inventory inv = Bukkit.createInventory(new WorthListHolder(), 54, ChatColor.BLUE + "Snowy" + ChatColor.WHITE + "Prices");
         List<Material> materials = plugin.getSellPrices().keySet().stream()
